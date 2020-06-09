@@ -1,0 +1,33 @@
+---
+title: "introduction"
+output: rmarkdown::html_vignette
+bibliography: jpucdbib.bib
+vignette: >
+  %\VignetteIndexEntry{introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+This project will create an aggregate set of census districts that 
+    covers Japanese census districts at the community level for multiple census 
+    years. The basic idea is that while Japanese municipalities merged extensively 
+    in the early 2000s and continue to merge, community (cho-oaza) have remained 
+    largely unchanged. However, there have been many small boundary changes. Also, 
+    some exurban developments have produced more extensive changes. This project 
+    takes the naive approach of using shapefiles to determine overlaps and merging 
+    districts that overlap more than 1% in either direction. It will cover 
+    census years 2000, 2005, 2010, 2015 and possibly 2020. It will also cover 
+    economic census years 2009 and 2014.
+
+An early version of this project [@engel2018] was written in a mishmash of SQL 
+    Server data, R, Microsoft C#, and Microsoft Geography. An objective of the 
+    current project is to redevelop it for the R/Github community include R code 
+    whenever possible and shapefiles in geojson format.
+
+# References
