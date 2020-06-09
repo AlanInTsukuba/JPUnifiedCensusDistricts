@@ -17,8 +17,7 @@ Description: This project will create an aggregate set of census districts that
     districts that overlap more than 1% in either direction. It will cover 
     census years 2000, 2005, 2010, 2015 and possibly 2020. It will also cover 
     economic census years 2009 and 2014.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+License: use_gpl3_license()
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
