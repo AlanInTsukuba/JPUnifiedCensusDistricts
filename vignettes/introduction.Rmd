@@ -1,6 +1,6 @@
 ---
 title: "introduction"
-output: rmarkdown::html_vignette
+output: rmarkdown::pdf_vignette
 bibliography: jpucdbib.bib
 vignette: >
   %\VignetteIndexEntry{introduction}
