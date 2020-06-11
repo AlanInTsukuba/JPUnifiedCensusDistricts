@@ -18,13 +18,13 @@
 #' @examples
 #' shppath <- system.file("extdata",package="jpucd")
 #' shpfile <- paste(shppath,list.files(shppath,pattern=".zip")[1],sep="/")
-#' kmlfile <- openzippedkmz(shpfile)
+#' kmlfile <- openkmzzip(shpfile)
 #' 
 #' @export
 openkmzzip <- function( zipfile )
 {
-	require(rgdal)
 	require(zip)
+	require(fs)
 
 # The file as downloaded contains a kmz file, which are 
 # zipped kml files inside of an outer zip file.
