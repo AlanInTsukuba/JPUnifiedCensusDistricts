@@ -15,6 +15,11 @@
 #'
 #' @details
 #'
+#' @examples
+#' shppath <- system.file("extdata",package="jpucd")
+#' shpfile <- paste(shppath,list.files(shppath,pattern=".zip")[1],sep="/")
+#' kmlfile <- openzippedkmz(shpfile)
+#' 
 #' @export
 openkmzzip <- function( zipfile )
 {
@@ -34,6 +39,9 @@ tmp2 <- tempfile()
 zip::unzip( kmzfile , exdir=tmp2)
 
 kmlfile <- paste(tmp2,list.files(tmp2,pattern='.kml')[1],sep="/")
+
+# clean up
+dir_delete(tmp1)
 
 return(kmlfile)
 }
