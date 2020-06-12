@@ -47,28 +47,28 @@ These Japanese census shapefiles conform to [KML 2.2](http://www.opengis.net/kml
 
 |Field|Typical value|Description|
 |:---------|:-------------|:------------|
-|KEY_CODE|082010010|Census district id code|
-|PREF|08|
-|CITY|201|
-|S_AREA|001000|
-|PREF_NAME|茨城県|
-|CITY_NAME|水戸市|
-|S_NAME|青柳町|
+|KEY_CODE|082010010|Census district id code, 9 or 11 digits|
+|PREF|08|Prefecture
+|CITY|201|Municipality. May be city, ward (in Tokyo), village, etc
+|S_AREA|001000|Subarea - first 4 digits at cho-oaza level, last 2 at chome-aza level
+|PREF_NAME|茨城県|Name of prefecture in Japanese
+|CITY_NAME|水戸市|Name of municipality
+|S_NAME|青柳町|Name of subarea
 |KIGO_E||
 |HCODE|8101|
-|AREA|2327255.25|
-|PERIMETER|9591.49414|
+|AREA|2327255.25|Area district in square meters
+|PERIMETER|9591.49414|Perimeter of area
 |h12kaxx_|803|
 |h12kaxx_ID|802|
-|KEN|08|
-|KEN_NAME|茨城県|
+|KEN|08|Number of prefecture
+|KEN_NAME|茨城県|Name of prefecture
 |SITYO_NAME||
 |DUMMY1||
 |GST_NAME|水戸市|
 |CSS_NAME||
-|KIHON1|0010|
+|KIHON1|0010|Cho-aza level code
 |DUMMY2|-|
-|KIHON2|00|
+|KIHON2|00|Chome-aza level code
 |KEYCODE1|201001000|
 |DUMMY3||
 |KEYCODE2|2010010|
@@ -80,16 +80,34 @@ These Japanese census shapefiles conform to [KML 2.2](http://www.opengis.net/kml
 |KIGO_I||
 |TATE|0|
 |DIR|0|
-|HIGHT|50|
+|HIGHT|50|Height in meters
 |JIKAKU|10|
-|NMOJI|3|
+|NMOJI|3|Number of characters in MOJI
 |DUMMY4||
-|MOJI|青柳町|
+|MOJI|青柳町|Name of subarea
 |SEQ_NO2|802|
 |KSUM|20|
 |CSUM|22|
-|JINKO|2366|
-|SETAI|877|
+|JINKO|2366|Population
+|SETAI|877|Number of households
 |X_CODE|140.480499|
 |Y_CODE|36.392635|
 |KCODE1|0010-00|
+-----------------------------------------
+
+Notes:
+(@) KEY_CODE 
+KEY_CODE is a unique id for the census district and can be used to 
+    relate geojson shapes to district data extracted to a separate 
+    csv file. To make into a usable id, 9-digit codes needed to be 
+    zero-padded to 11 digits. The full 11-digit code is a concatenation 
+    of PREF, CITY, KIHON1 and KIHON2 codes.
+(@) S_NAME
+S_NAME is usually the geographic name of the district but has issues.
+    This field is not standardized across prefectures and is 
+    particularly problematic in Kyoto Prefecture. Named districts may 
+    contain other named districts whose names are not in this 
+    extended data. These names apparently derive from folder names used
+    by local census offices to manage census tasks.
+
+ 
