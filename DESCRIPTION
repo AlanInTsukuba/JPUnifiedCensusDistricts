@@ -27,5 +27,6 @@ Imports:
     rgeos
 Suggests: 
     knitr,
-    rmarkdown
-VignetteBuilder: knitr
+    rmarkdown,
+    bookdown
+VignetteBuilder: bookdown
