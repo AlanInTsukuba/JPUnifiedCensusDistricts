@@ -35,6 +35,7 @@ openkmzzip places the contained kml file in the R temp file folder and returns i
 
 ```{r}
 library(jpucd)
+library(zip)
 shppath <- system.file("extdata",package="jpucd")
 shpfile <- paste(shppath,list.files(shppath,pattern=".zip")[1],sep="/")
 kmlfile <- openkmzzip(shpfile)
@@ -42,4 +43,52 @@ kmlfile <- openkmzzip(shpfile)
 
 These Japanese census shapefiles conform to [KML 2.2](http://www.opengis.net/kml/2.2). Each Placemark element 
     contains ExtendedData that is particularly useful for identifying placemarks and can be used 
-    for developing mappings from postal addresses to census districts. 
+    for developing mappings from postal addresses to census districts.
+
+|Field|Typical value|Description|
+|KEY_CODE|082010010|Census district id code|
+|PREF|08|
+|CITY|201|
+|S_AREA|001000|
+|PREF_NAME|茨城県|
+|CITY_NAME|水戸市|
+|S_NAME|青柳町|
+|KIGO_E||
+|HCODE|8101|
+|AREA|2327255.25|
+|PERIMETER|9591.49414|
+|h12kaxx_|803|
+|h12kaxx_ID|802|
+|KEN|08|
+|KEN_NAME|茨城県|
+|SITYO_NAME||
+|DUMMY1||
+|GST_NAME|水戸市|
+|CSS_NAME||
+|KIHON1|0010|
+|DUMMY2|-|
+|KIHON2|00|
+|KEYCODE1|201001000|
+|DUMMY3||
+|KEYCODE2|2010010|
+|AREA_MAX_F|M|
+|KIGO_D||
+|N_KEN||
+|N_CITY||
+|N_C1|0|
+|KIGO_I||
+|TATE|0|
+|DIR|0|
+|HIGHT|50|
+|JIKAKU|10|
+|NMOJI|3|
+|DUMMY4||
+|MOJI|青柳町|
+|SEQ_NO2|802|
+|KSUM|20|
+|CSUM|22|
+|JINKO|2366|
+|SETAI|877|
+|X_CODE|140.480499|
+|Y_CODE|36.392635|
+|KCODE1|0010-00|

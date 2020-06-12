@@ -327,17 +327,18 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <span id="cb2-4"><a href="#cb2-4"></a><span class="co">#&gt; [5] &quot;A002005522009DDKWC08.zip&quot; &quot;A002005522014DDKWC08.zip&quot;</span></span></code></pre></div>
 <p>openkmzzip places the contained kml file in the R temp file folder and returns its path.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">library</span>(jpucd)</span>
-<span id="cb3-2"><a href="#cb3-2"></a>shppath &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>,<span class="dt">package=</span><span class="st">&quot;jpucd&quot;</span>)</span>
-<span id="cb3-3"><a href="#cb3-3"></a>shpfile &lt;-<span class="st"> </span><span class="kw">paste</span>(shppath,<span class="kw">list.files</span>(shppath,<span class="dt">pattern=</span><span class="st">&quot;.zip&quot;</span>)[<span class="dv">1</span>],<span class="dt">sep=</span><span class="st">&quot;/&quot;</span>)</span>
-<span id="cb3-4"><a href="#cb3-4"></a>kmlfile &lt;-<span class="st"> </span><span class="kw">openkmzzip</span>(shpfile)</span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="co">#&gt;  要求されたパッケージ zip をロード中です</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="kw">library</span>(zip)</span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="co">#&gt; </span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="co">#&gt;  次のパッケージを付け加えます: &#39;zip&#39;</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co">#&gt;  以下のオブジェクトは &#39;package:utils&#39; からマスクされています: </span></span>
 <span id="cb3-6"><a href="#cb3-6"></a><span class="co">#&gt; </span></span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="co">#&gt;  次のパッケージを付け加えます: &#39;zip&#39;</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="co">#&gt;  以下のオブジェクトは &#39;package:utils&#39; からマスクされています: </span></span>
-<span id="cb3-9"><a href="#cb3-9"></a><span class="co">#&gt; </span></span>
-<span id="cb3-10"><a href="#cb3-10"></a><span class="co">#&gt;      unzip, zip</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="co">#&gt;      unzip, zip</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>shppath &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>,<span class="dt">package=</span><span class="st">&quot;jpucd&quot;</span>)</span>
+<span id="cb3-9"><a href="#cb3-9"></a>shpfile &lt;-<span class="st"> </span><span class="kw">paste</span>(shppath,<span class="kw">list.files</span>(shppath,<span class="dt">pattern=</span><span class="st">&quot;.zip&quot;</span>)[<span class="dv">1</span>],<span class="dt">sep=</span><span class="st">&quot;/&quot;</span>)</span>
+<span id="cb3-10"><a href="#cb3-10"></a>kmlfile &lt;-<span class="st"> </span><span class="kw">openkmzzip</span>(shpfile)</span>
 <span id="cb3-11"><a href="#cb3-11"></a><span class="co">#&gt;  要求されたパッケージ fs をロード中です</span></span></code></pre></div>
 <p>These Japanese census shapefiles conform to <a href="http://www.opengis.net/kml/2.2">KML 2.2</a>. Each Placemark element contains ExtendedData that is particularly useful for identifying placemarks and can be used for developing mappings from postal addresses to census districts.</p>
+<p>|Field|Typical value|Description| |KEY_CODE|082010010|Census district id code| |PREF|08| |CITY|201| |S_AREA|001000| |PREF_NAME|茨城県| |CITY_NAME|水戸市| |S_NAME|青柳町| |KIGO_E|| |HCODE|8101| |AREA|2327255.25| |PERIMETER|9591.49414| |h12kaxx_|803| |h12kaxx_ID|802| |KEN|08| |KEN_NAME|茨城県| |SITYO_NAME|| |DUMMY1|| |GST_NAME|水戸市| |CSS_NAME|| |KIHON1|0010| |DUMMY2|-| |KIHON2|00| |KEYCODE1|201001000| |DUMMY3|| |KEYCODE2|2010010| |AREA_MAX_F|M| |KIGO_D|| |N_KEN|| |N_CITY|| |N_C1|0| |KIGO_I|| |TATE|0| |DIR|0| |HIGHT|50| |JIKAKU|10| |NMOJI|3| |DUMMY4|| |MOJI|青柳町| |SEQ_NO2|802| |KSUM|20| |CSUM|22| |JINKO|2366| |SETAI|877| |X_CODE|140.480499| |Y_CODE|36.392635| |KCODE1|0010-00|</p>
 </div>
 
 
