@@ -338,7 +338,247 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <span id="cb3-10"><a href="#cb3-10"></a>kmlfile &lt;-<span class="st"> </span><span class="kw">openkmzzip</span>(shpfile)</span>
 <span id="cb3-11"><a href="#cb3-11"></a><span class="co">#&gt;  要求されたパッケージ fs をロード中です</span></span></code></pre></div>
 <p>These Japanese census shapefiles conform to <a href="http://www.opengis.net/kml/2.2">KML 2.2</a>. Each Placemark element contains ExtendedData that is particularly useful for identifying placemarks and can be used for developing mappings from postal addresses to census districts.</p>
-<p>|Field|Typical value|Description| |KEY_CODE|082010010|Census district id code| |PREF|08| |CITY|201| |S_AREA|001000| |PREF_NAME|茨城県| |CITY_NAME|水戸市| |S_NAME|青柳町| |KIGO_E|| |HCODE|8101| |AREA|2327255.25| |PERIMETER|9591.49414| |h12kaxx_|803| |h12kaxx_ID|802| |KEN|08| |KEN_NAME|茨城県| |SITYO_NAME|| |DUMMY1|| |GST_NAME|水戸市| |CSS_NAME|| |KIHON1|0010| |DUMMY2|-| |KIHON2|00| |KEYCODE1|201001000| |DUMMY3|| |KEYCODE2|2010010| |AREA_MAX_F|M| |KIGO_D|| |N_KEN|| |N_CITY|| |N_C1|0| |KIGO_I|| |TATE|0| |DIR|0| |HIGHT|50| |JIKAKU|10| |NMOJI|3| |DUMMY4|| |MOJI|青柳町| |SEQ_NO2|802| |KSUM|20| |CSUM|22| |JINKO|2366| |SETAI|877| |X_CODE|140.480499| |Y_CODE|36.392635| |KCODE1|0010-00|</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Field</th>
+<th align="left">Typical value</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">KEY_CODE</td>
+<td align="left">082010010</td>
+<td align="left">Census district id code</td>
+</tr>
+<tr class="even">
+<td align="left">PREF</td>
+<td align="left">08</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">CITY</td>
+<td align="left">201</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">S_AREA</td>
+<td align="left">001000</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">PREF_NAME</td>
+<td align="left">茨城県</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">CITY_NAME</td>
+<td align="left">水戸市</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">S_NAME</td>
+<td align="left">青柳町</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">KIGO_E</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">HCODE</td>
+<td align="left">8101</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">AREA</td>
+<td align="left">2327255.25</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">PERIMETER</td>
+<td align="left">9591.49414</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">h12kaxx_</td>
+<td align="left">803</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">h12kaxx_ID</td>
+<td align="left">802</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">KEN</td>
+<td align="left">08</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">KEN_NAME</td>
+<td align="left">茨城県</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">SITYO_NAME</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">DUMMY1</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">GST_NAME</td>
+<td align="left">水戸市</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">CSS_NAME</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">KIHON1</td>
+<td align="left">0010</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">DUMMY2</td>
+<td align="left">-</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">KIHON2</td>
+<td align="left">00</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">KEYCODE1</td>
+<td align="left">201001000</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">DUMMY3</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">KEYCODE2</td>
+<td align="left">2010010</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">AREA_MAX_F</td>
+<td align="left">M</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">KIGO_D</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">N_KEN</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">N_CITY</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">N_C1</td>
+<td align="left">0</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">KIGO_I</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">TATE</td>
+<td align="left">0</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">DIR</td>
+<td align="left">0</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">HIGHT</td>
+<td align="left">50</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">JIKAKU</td>
+<td align="left">10</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">NMOJI</td>
+<td align="left">3</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">DUMMY4</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">MOJI</td>
+<td align="left">青柳町</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">SEQ_NO2</td>
+<td align="left">802</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">KSUM</td>
+<td align="left">20</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">CSUM</td>
+<td align="left">22</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">JINKO</td>
+<td align="left">2366</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">SETAI</td>
+<td align="left">877</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">X_CODE</td>
+<td align="left">140.480499</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Y_CODE</td>
+<td align="left">36.392635</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">KCODE1</td>
+<td align="left">0010-00</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 </div>
 
 

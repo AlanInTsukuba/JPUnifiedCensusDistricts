@@ -46,6 +46,7 @@ These Japanese census shapefiles conform to [KML 2.2](http://www.opengis.net/kml
     for developing mappings from postal addresses to census districts.
 
 |Field|Typical value|Description|
+|:---------|:-------------|:------------|
 |KEY_CODE|082010010|Census district id code|
 |PREF|08|
 |CITY|201|
