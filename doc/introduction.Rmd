@@ -41,4 +41,13 @@ The original shapefiles are in kmz format wrapped in a zip file. The first task 
 
 For details, see [Japan Census Shapefiles](origshapefiles.html).
 
+## Subtask 1.1: Convert original kml file to substitute district id codes for feature names
+
+The original shapefiles have placenames for each placemark (feature), but these are not 
+    unique. Extended data for each placemark can be used to create unique ids that can be 
+    used to relate shapes in the geojson file to be produced to data in a csv to be produced 
+    in subtask 1.2.
+
+## Subtask 1.2: Extract extended data into csv file
+
 # References
