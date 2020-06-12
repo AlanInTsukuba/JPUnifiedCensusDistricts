@@ -41,6 +41,8 @@ shpfile <- paste(shppath,list.files(shppath,pattern=".zip")[1],sep="/")
 kmlfile <- openkmzzip(shpfile)
 ```
 
+# Extended data
+
 These Japanese census shapefiles conform to [KML 2.2](http://www.opengis.net/kml/2.2). Each Placemark element 
     contains ExtendedData that is particularly useful for identifying placemarks and can be used 
     for developing mappings from postal addresses to census districts.

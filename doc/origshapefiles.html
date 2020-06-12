@@ -337,6 +337,9 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <span id="cb3-9"><a href="#cb3-9"></a>shpfile &lt;-<span class="st"> </span><span class="kw">paste</span>(shppath,<span class="kw">list.files</span>(shppath,<span class="dt">pattern=</span><span class="st">&quot;.zip&quot;</span>)[<span class="dv">1</span>],<span class="dt">sep=</span><span class="st">&quot;/&quot;</span>)</span>
 <span id="cb3-10"><a href="#cb3-10"></a>kmlfile &lt;-<span class="st"> </span><span class="kw">openkmzzip</span>(shpfile)</span>
 <span id="cb3-11"><a href="#cb3-11"></a><span class="co">#&gt;  要求されたパッケージ fs をロード中です</span></span></code></pre></div>
+</div>
+<div id="extended-data" class="section level1">
+<h1>Extended data</h1>
 <p>These Japanese census shapefiles conform to <a href="http://www.opengis.net/kml/2.2">KML 2.2</a>. Each Placemark element contains ExtendedData that is particularly useful for identifying placemarks and can be used for developing mappings from postal addresses to census districts.</p>
 <table>
 <colgroup>
