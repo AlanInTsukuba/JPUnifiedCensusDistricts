@@ -585,7 +585,15 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 </tbody>
 </table>
 <hr />
-<p>Notes: (@) KEY_CODE KEY_CODE is a unique id for the census district and can be used to relate geojson shapes to district data extracted to a separate csv file. To make into a usable id, 9-digit codes needed to be zero-padded to 11 digits. The full 11-digit code is a concatenation of PREF, CITY, KIHON1 and KIHON2 codes. (@) S_NAME S_NAME is usually the geographic name of the district but has issues. This field is not standardized across prefectures and is particularly problematic in Kyoto Prefecture. Named districts may contain other named districts whose names are not in this extended data. These names apparently derive from folder names used by local census offices to manage census tasks.</p>
+<p>Notes:</p>
+<ol class="example" style="list-style-type: decimal">
+<li>KEY_CODE</li>
+</ol>
+<p>KEY_CODE is a unique id for the census district and can be used to relate geojson shapes to district data extracted to a separate csv file. To make into a usable id, 9-digit codes needed to be zero-padded to 11 digits. The full 11-digit code is a concatenation of PREF, CITY, KIHON1 and KIHON2 codes.</p>
+<ol start="2" class="example" style="list-style-type: decimal">
+<li>S_NAME</li>
+</ol>
+<p>S_NAME is usually the geographic name of the district but has issues. This field is not standardized across prefectures and is particularly problematic in Kyoto Prefecture. Named districts may contain other named districts whose names are not in this extended data. These names apparently derive from folder names used by local census offices to manage census tasks.</p>
 </div>
 
 

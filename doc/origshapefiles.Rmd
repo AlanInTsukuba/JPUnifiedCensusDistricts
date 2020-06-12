@@ -96,13 +96,17 @@ These Japanese census shapefiles conform to [KML 2.2](http://www.opengis.net/kml
 -----------------------------------------
 
 Notes:
+
 (@) KEY_CODE 
+
 KEY_CODE is a unique id for the census district and can be used to 
     relate geojson shapes to district data extracted to a separate 
     csv file. To make into a usable id, 9-digit codes needed to be 
     zero-padded to 11 digits. The full 11-digit code is a concatenation 
     of PREF, CITY, KIHON1 and KIHON2 codes.
+
 (@) S_NAME
+
 S_NAME is usually the geographic name of the district but has issues.
     This field is not standardized across prefectures and is 
     particularly problematic in Kyoto Prefecture. Named districts may 
@@ -110,4 +114,4 @@ S_NAME is usually the geographic name of the district but has issues.
     extended data. These names apparently derive from folder names used
     by local census offices to manage census tasks.
 
- 
+
