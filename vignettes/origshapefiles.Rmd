@@ -1,6 +1,6 @@
 ---
 title: "Japan Census Shapefiles"
-output: rmarkdown::pdf_document
+output: rmarkdown::html_document
 bibliography: jpucdbib.bib
 vignette: >
   %\VignetteIndexEntry{Japan Census Shapefiles}
