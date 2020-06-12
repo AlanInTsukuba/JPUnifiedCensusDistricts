@@ -1,6 +1,6 @@
 ---
 title: "Japan Census Shapefiles"
-output: bookdown::pdf_document2
+output: html_document
 bibliography: jpucdbib.bib
 vignette: >
   %\VignetteIndexEntry{Japan Census Shapefiles}
