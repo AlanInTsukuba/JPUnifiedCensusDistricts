@@ -339,6 +339,11 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <span id="cb3-11"><a href="#cb3-11"></a><span class="co">#&gt;  要求されたパッケージ fs をロード中です</span></span></code></pre></div>
 <p>These Japanese census shapefiles conform to <a href="http://www.opengis.net/kml/2.2">KML 2.2</a>. Each Placemark element contains ExtendedData that is particularly useful for identifying placemarks and can be used for developing mappings from postal addresses to census districts.</p>
 <table>
+<colgroup>
+<col width="27%"></col>
+<col width="37%"></col>
+<col width="35%"></col>
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Field</th>
@@ -350,37 +355,37 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <tr class="odd">
 <td align="left">KEY_CODE</td>
 <td align="left">082010010</td>
-<td align="left">Census district id code</td>
+<td align="left">Census district id code, 9 or 11 digits</td>
 </tr>
 <tr class="even">
 <td align="left">PREF</td>
 <td align="left">08</td>
-<td align="left"></td>
+<td align="left">Prefecture</td>
 </tr>
 <tr class="odd">
 <td align="left">CITY</td>
 <td align="left">201</td>
-<td align="left"></td>
+<td align="left">Municipality. May be city, ward (in Tokyo), village, etc</td>
 </tr>
 <tr class="even">
 <td align="left">S_AREA</td>
 <td align="left">001000</td>
-<td align="left"></td>
+<td align="left">Subarea - first 4 digits at cho-oaza level, last 2 at chome-aza level</td>
 </tr>
 <tr class="odd">
 <td align="left">PREF_NAME</td>
 <td align="left">茨城県</td>
-<td align="left"></td>
+<td align="left">Name of prefecture in Japanese</td>
 </tr>
 <tr class="even">
 <td align="left">CITY_NAME</td>
 <td align="left">水戸市</td>
-<td align="left"></td>
+<td align="left">Name of municipality</td>
 </tr>
 <tr class="odd">
 <td align="left">S_NAME</td>
 <td align="left">青柳町</td>
-<td align="left"></td>
+<td align="left">Name of subarea</td>
 </tr>
 <tr class="even">
 <td align="left">KIGO_E</td>
@@ -395,12 +400,12 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <tr class="even">
 <td align="left">AREA</td>
 <td align="left">2327255.25</td>
-<td align="left"></td>
+<td align="left">Area district in square meters</td>
 </tr>
 <tr class="odd">
 <td align="left">PERIMETER</td>
 <td align="left">9591.49414</td>
-<td align="left"></td>
+<td align="left">Perimeter of area</td>
 </tr>
 <tr class="even">
 <td align="left">h12kaxx_</td>
@@ -415,12 +420,12 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <tr class="even">
 <td align="left">KEN</td>
 <td align="left">08</td>
-<td align="left"></td>
+<td align="left">Number of prefecture</td>
 </tr>
 <tr class="odd">
 <td align="left">KEN_NAME</td>
 <td align="left">茨城県</td>
-<td align="left"></td>
+<td align="left">Name of prefecture</td>
 </tr>
 <tr class="even">
 <td align="left">SITYO_NAME</td>
@@ -445,7 +450,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <tr class="even">
 <td align="left">KIHON1</td>
 <td align="left">0010</td>
-<td align="left"></td>
+<td align="left">Cho-aza level code</td>
 </tr>
 <tr class="odd">
 <td align="left">DUMMY2</td>
@@ -455,7 +460,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <tr class="even">
 <td align="left">KIHON2</td>
 <td align="left">00</td>
-<td align="left"></td>
+<td align="left">Chome-aza level code</td>
 </tr>
 <tr class="odd">
 <td align="left">KEYCODE1</td>
@@ -515,7 +520,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <tr class="even">
 <td align="left">HIGHT</td>
 <td align="left">50</td>
-<td align="left"></td>
+<td align="left">Height in meters</td>
 </tr>
 <tr class="odd">
 <td align="left">JIKAKU</td>
@@ -525,7 +530,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <tr class="even">
 <td align="left">NMOJI</td>
 <td align="left">3</td>
-<td align="left"></td>
+<td align="left">Number of characters in MOJI</td>
 </tr>
 <tr class="odd">
 <td align="left">DUMMY4</td>
@@ -535,7 +540,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <tr class="even">
 <td align="left">MOJI</td>
 <td align="left">青柳町</td>
-<td align="left"></td>
+<td align="left">Name of subarea</td>
 </tr>
 <tr class="odd">
 <td align="left">SEQ_NO2</td>
@@ -555,12 +560,12 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <tr class="even">
 <td align="left">JINKO</td>
 <td align="left">2366</td>
-<td align="left"></td>
+<td align="left">Population</td>
 </tr>
 <tr class="odd">
 <td align="left">SETAI</td>
 <td align="left">877</td>
-<td align="left"></td>
+<td align="left">Number of households</td>
 </tr>
 <tr class="even">
 <td align="left">X_CODE</td>
@@ -579,6 +584,8 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 </tr>
 </tbody>
 </table>
+<hr />
+<p>Notes: (@) KEY_CODE KEY_CODE is a unique id for the census district and can be used to relate geojson shapes to district data extracted to a separate csv file. To make into a usable id, 9-digit codes needed to be zero-padded to 11 digits. The full 11-digit code is a concatenation of PREF, CITY, KIHON1 and KIHON2 codes. (@) S_NAME S_NAME is usually the geographic name of the district but has issues. This field is not standardized across prefectures and is particularly problematic in Kyoto Prefecture. Named districts may contain other named districts whose names are not in this extended data. These names apparently derive from folder names used by local census offices to manage census tasks.</p>
 </div>
 
 
