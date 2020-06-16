@@ -105,7 +105,11 @@ KEY_CODE is a unique id for the census district and can be used to
     relate geojson shapes to district data extracted to a separate 
     csv file. To make into a usable id, 9-digit codes needed to be 
     zero-padded to 11 digits. The full 11-digit code is a concatenation 
-    of PREF, CITY, KIHON1 and KIHON2 codes.
+    of PREF, CITY, KIHON1 and KIHON2 codes. The KEY_CODE field in eStat 
+    shapefiles has severe quality control issues. In this project, 
+    unique ids are created by concatenating the digit "1", PREF, CITY, 
+    KIHON1 and KIHON2 fields. The digit "1" serves as a version code; 
+    unified districts replace this with the digit "2".
 
 (@) S_NAME
 
