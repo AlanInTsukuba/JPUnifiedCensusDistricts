@@ -18,7 +18,7 @@
 	"features": [
 	{ "type": "Feature",
 		"id":108201001000,
-		"name":青柳町,
+		"name":"青柳町",
 		"properties":{
 			"KEY_CODE":082010010,
 			"PREF":08,
