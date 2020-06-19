@@ -2,7 +2,6 @@
 	"features": [
 	{ "type": "Feature",
 		"id":108201001000,
-		"name":"青柳町",
 	"geometry": {
 		"type":"Polygon",
 		"coordinates": [
