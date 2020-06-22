@@ -41,7 +41,20 @@ shpfile <- paste(shppath,list.files(shppath,pattern=".zip")[1],sep="/")
 kmlfile <- openkmzzip(shpfile)
 ```
 
-# Extended data
+Currently, the external data contains the following files:
+
+|File name|Format|Census type|Census year|Prefecture|Notes|
+|:-----------|:----------|:--------:|:--------:|:--------|:---------------|
+|A002005212000DDKWC08.zip|Zipped kml|General|2000|Ibaraki|Original file from eStat|
+|A002005522009DDKWC08.zip|Zipped kml|Economic|2009|Ibaraki|Original file from eStat|
+|A002005522014DDKWC08.zip|Zipped kml|Economic|2014|Ibaraki|Original file from eStat|
+|JPgenlCY2000P08Ibaraki.geojson.zip|Zipped geojson|General|2000|Ibaraki|Converted from eStat file|
+|JPgenlCY2005P08Ibaraki.geojson.zip|Zipped geojson|General|2005|Ibaraki|Converted from eStat file|
+|JPgenlCY2010P08Ibaraki.geojson.zip|Zipped geojson|General|2010|Ibaraki|Converted from eStat file|
+|JPgenlCY2015P08Ibaraki.geojson.zip|Zipped geojson|General|2000|Ibaraki|Converted from eStat file|
+
+
+# Extended data - Original general census files from eStat
 
 These Japanese census shapefiles conform to [KML 2.2](http://www.opengis.net/kml/2.2). Each Placemark element 
     contains ExtendedData that is particularly useful for identifying placemarks and can be used 
