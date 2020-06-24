@@ -44,6 +44,8 @@ For details, see [Japan Census Shapefiles](origshapefiles.html).
 Because R does not have robust and convenient XML packages, a C# program was developed with Microsoft 
     Visual Studio 2008 to produce geojson shapefiles. 
 
+# Task 2: Identify aggregation strategies
+
 
 
 # References
