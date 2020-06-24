@@ -41,7 +41,20 @@ shpfile <- paste(shppath,list.files(shppath,pattern=".zip")[1],sep="/")
 kmlfile <- openkmzzip(shpfile)
 ```
 
-# Extended data
+Currently, the external data contains the following files:
+
+|File name|Format|Census type|Census year|Prefecture|Notes|
+|:-----------|:----------|:--------:|:--------:|:--------|:---------------|
+|A002005212000DDKWC08.zip|Zipped kml|General|2000|Ibaraki|Original file from eStat|
+|A002005522009DDKWC08.zip|Zipped kml|Economic|2009|Ibaraki|Original file from eStat|
+|A002005522014DDKWC08.zip|Zipped kml|Economic|2014|Ibaraki|Original file from eStat|
+|JPgenlCY2000P08Ibaraki.geojson.zip|Zipped geojson|General|2000|Ibaraki|Converted from eStat file|
+|JPgenlCY2005P08Ibaraki.geojson.zip|Zipped geojson|General|2005|Ibaraki|Converted from eStat file|
+|JPgenlCY2010P08Ibaraki.geojson.zip|Zipped geojson|General|2010|Ibaraki|Converted from eStat file|
+|JPgenlCY2015P08Ibaraki.geojson.zip|Zipped geojson|General|2000|Ibaraki|Converted from eStat file|
+
+
+# Extended data - Original general census files from eStat
 
 These Japanese census shapefiles conform to [KML 2.2](http://www.opengis.net/kml/2.2). Each Placemark element 
     contains ExtendedData that is particularly useful for identifying placemarks and can be used 
@@ -56,7 +69,7 @@ These Japanese census shapefiles conform to [KML 2.2](http://www.opengis.net/kml
 |PREF_NAME|茨城県|Name of prefecture in Japanese
 |CITY_NAME|水戸市|Name of municipality
 |S_NAME|青柳町|Name of subarea
-|KIGO_E||
+|KIGO_E|E1|Flag for districts that have multiple shapes. (See note below.)  
 |HCODE|8101|
 |AREA|2327255.25|Area district in square meters
 |PERIMETER|9591.49414|Perimeter of area
@@ -105,7 +118,11 @@ KEY_CODE is a unique id for the census district and can be used to
     relate geojson shapes to district data extracted to a separate 
     csv file. To make into a usable id, 9-digit codes needed to be 
     zero-padded to 11 digits. The full 11-digit code is a concatenation 
-    of PREF, CITY, KIHON1 and KIHON2 codes.
+    of PREF, CITY, KIHON1 and KIHON2 codes. The KEY_CODE field in eStat 
+    shapefiles has severe quality control issues. In this project, 
+    unique ids are created by concatenating the digit "1", PREF, CITY, 
+    KIHON1 and KIHON2 fields. The digit "1" serves as a version code; 
+    unified districts replace this with the digit "2".
 
 (@) S_NAME
 
@@ -116,4 +133,63 @@ S_NAME is usually the geographic name of the district but has issues.
     extended data. These names apparently derive from folder names used
     by local census offices to manage census tasks.
 
+(@) KIGO_E
+
+KIGO_E flags districts with multiple shapes. Shapes are labeled E1, E2, etc. 
+    District stats such as population are gathered under shape E1.
+
+# Extended data - Original economic census files from eStat
+
+Shapefiles for the economic census generally correspond to those of the general census.
+    However, enumeration at the cho-oaza and chome-koaza levels differs. If there are 
+    no chome-koaza sublevels, the final 6 digits of S_AREA and AZA_CODE are idential
+    to the first 6 digits. If there are sublevels, the first 6 digits indicate the 
+    cho-oaza level and the last 6 digits designate the sublevel. For the first sublevel
+    of the set, the last and first 6 digits are identical. 
+
+|Field|Typical value|Description|
+|:---------|:-------------|:------------|
+|KEY_CODE|082010000000018|Census district id code, 15 digits|
+|PREF|08|Prefecture
+|CITY|201|Municipality. May be city, ward (in Tokyo), village, etc
+|S_AREA|001600001800|Subarea - first 6 digits at cho-oaza level, last 6 at chome-aza level
+|PREF_NAME|茨城県|Name of prefecture in Japanese
+|CITY_NAME|水戸市|Name of municipality
+|S_NAME|泉町３丁目|Name of subarea
+|KIGO_E||Flag for districts that have multiple shapes. (See note below.)  
+|AREA|62497.287|Area district in square meters
+|PERIMETER|1029.752|Perimeter of area in meters
+|KEN|08|Number of prefecture
+|KEN_NAME|茨城県|Name of prefecture
+|CSS_NAME|水戸市|
+|MOJI|泉町３丁目|Name of subarea
+|AZA_CODE|001600001800|Cho-aza level code
+|AREA_MAX_F|M|
+|KIGO_D||
+|N_KEN||
+|N_CITY||
+|N_C1|0|
+|KIGO_I||
+|JIGYOSHO|180|
+|JUGYOSHA|2109|
+|X_CODE|140.46115|
+|Y_CODE|36.37999|
+|KEYCODE1|2010000000018|
+-----------------------------------------
+
+Notes:
+
+(@) KEY_CODE 
+
+KEY_CODE is an id for the census district and can be used to 
+    relate geojson shapes to district data extracted to a separate 
+    csv file. It may not be unique but can be made unique in combination
+    with KIGO_E.
+
+(@) S_NAME
+
+(@) KIGO_E
+
+KIGO_E flags districts with multiple shapes. Shapes are labeled E1, E2, etc. 
+    District stats such as population are gathered under shape E1.
 

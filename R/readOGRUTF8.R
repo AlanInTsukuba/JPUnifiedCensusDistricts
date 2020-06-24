@@ -16,7 +16,7 @@
 #'
 #' @param file Name of geojson shapefile to be unpacked
 #'
-#' @return path of unzipped kml file
+#' @return Spatial object
 #'
 #' @details
 #'
