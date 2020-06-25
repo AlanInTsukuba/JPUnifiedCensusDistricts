@@ -1,0 +1,23 @@
+---
+title: "Census districts in Ibaraki along the Tsukuba Express"
+output: html_vignette
+bibliography: jpucdbib.bib
+vignette: >
+  %\VignetteIndexEntry{Japan Census Shapefiles}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(jpucd)
+```
+
+# The Tsukuba Express
+
