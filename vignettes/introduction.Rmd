@@ -25,12 +25,12 @@ This project will create an aggregate set of census districts that
     census years 2000, 2005, 2010, 2015 and possibly 2020. It will also cover 
     economic census years 2009 and 2014.
 
-An early version of this project [@engel2018] was written in a mishmash of SQL 
+An early version of this project [@engel2018] was written in a combination of SQL 
     Server data, R, Microsoft C#, and Microsoft Geography. An objective of the 
     current project is to redevelop it for the R/Github community include R code 
-    whenever possible and shapefiles in geojson format.
+    whenever possible and shapefiles in more modern formats.
 
-# Task 1: Convert original shapefiles to geojson
+# Task 1: Convert original shapefiles to geojson and GeoPackage[^1]
 
 This package includes shapefiles for local census districts in Ibaraki Prefecture covering 
     the six censuses. These as well as shapefiles for all prefectures can also be downloaded from 
@@ -49,3 +49,7 @@ Because R does not have robust and convenient XML packages, a C# program was dev
 
 
 # References
+
+
+[^1]: Thanks to [Roger Bivand](https://orcid.org/0000-0003-2392-6140) for pointing me to the 
+    current state of the field.
