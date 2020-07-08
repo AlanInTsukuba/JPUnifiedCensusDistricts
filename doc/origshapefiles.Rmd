@@ -33,13 +33,7 @@ list.files(system.file("extdata",package="jpucd"))
 ```
 openkmzzip places the contained kml file in the R temp file folder and returns its path.
 
-```{r}
-library(jpucd)
-library(zip)
-shppath <- system.file("extdata",package="jpucd")
-shpfile <- paste(shppath,list.files(shppath,pattern=".zip")[1],sep="/")
-kmlfile <- openkmzzip(shpfile)
-```
+
 
 Currently, the external data contains the following files:
 

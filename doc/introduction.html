@@ -229,13 +229,16 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 
 <p>This project will create an aggregate set of census districts that covers Japanese census districts at the community level for multiple census years. The basic idea is that while Japanese municipalities merged extensively in the early 2000s and continue to merge, community (cho-oaza) have remained largely unchanged. However, there have been many small boundary changes. Also, some exurban developments have produced more extensive changes. This project takes the naive approach of using shapefiles to determine overlaps and merging districts that overlap more than 1% in either direction. It will cover census years 2000, 2005, 2010, 2015 and possibly 2020. It will also cover economic census years 2009 and 2014.</p>
-<p>An early version of this project <span class="citation">(Engel 2018)</span> was written in a mishmash of SQL Server data, R, Microsoft C#, and Microsoft Geography. An objective of the current project is to redevelop it for the R/Github community include R code whenever possible and shapefiles in geojson format.</p>
-<div id="task-1-convert-original-shapefiles-to-geojson" class="section level1">
-<h1>Task 1: Convert original shapefiles to geojson</h1>
+<p>An early version of this project <span class="citation">(Engel 2018)</span> was written in a combination of SQL Server data, R, Microsoft C#, and Microsoft Geography. An objective of the current project is to redevelop it for the R/Github community include R code whenever possible and shapefiles in more modern formats.</p>
+<div id="task-1-convert-original-shapefiles-to-geojson-and-geopackage1" class="section level1">
+<h1>Task 1: Convert original shapefiles to geojson and GeoPackage<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></h1>
 <p>This package includes shapefiles for local census districts in Ibaraki Prefecture covering the six censuses. These as well as shapefiles for all prefectures can also be downloaded from <a href="https://www.e-stat.go.jp/gis/statmap-search?page=1&amp;type=2&amp;aggregateUnitForBoundary=A&amp;toukeiCode=00200521">e-Stat</a>.</p>
 <p>The original shapefiles are in kmz format wrapped in a zip file. The first task is to extract and convert these to geojson.</p>
 <p>For details, see <a href="origshapefiles.html">Japan Census Shapefiles</a>.</p>
 <p>Because R does not have robust and convenient XML packages, a C# program was developed with Microsoft Visual Studio 2008 to produce geojson shapefiles.</p>
+</div>
+<div id="task-2-identify-aggregation-strategies" class="section level1">
+<h1>Task 2: Identify aggregation strategies</h1>
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1 class="unnumbered">References</h1>
@@ -244,6 +247,12 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <p>Engel, Alan. 2018. “2G05 時空間的小地域（町・大字）データとその小地域に特定された意匠有権者住所からなる地域イノベーション実証研究用のデータベース.” In <em>33rd Annual Academic Conference of the Japan Society for Research Policy and Innovation Management</em>. Japan Society for Research Policy; Innovation Management. <a href="http://hdl.handle.net/10119/15553">http://hdl.handle.net/10119/15553</a>.</p>
 </div>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Thanks to <a href="https://orcid.org/0000-0003-2392-6140">Roger Bivand</a> for pointing me to the current state of the field.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
 
 
