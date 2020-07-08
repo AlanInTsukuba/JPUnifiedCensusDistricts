@@ -3,7 +3,7 @@ title: "Census districts in Ibaraki along the Tsukuba Express"
 output: html_vignette
 bibliography: jpucdbib.bib
 vignette: >
-  %\VignetteIndexEntry{Japan Census Shapefiles}
+  %\VignetteIndexEntry{Census Districts along Tsukuba Express}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
